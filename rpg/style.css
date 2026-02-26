@@ -1,11 +1,37 @@
-body{background-color: aquamarine;}
+body{
+    background-color: aquamarine;
+}
 
-#text{}
+#text{
+    background-color: blueviolet; color: bisque; padding: 10px;
+}
 
-#game{}
+#game{
+    max-width: 500px;
+    max-height: 400px;
+    background-color: aliceblue;
+    color: brown;
+    margin: 0 auto;
+    padding: 10px;
+}
 
-#controls{}
+#controls{
+    border: 1px black;
+    padding: 5px;
+}
 
-#stats{}
+#stats{
+    border: 1px black;
+    padding: 5px;
+}
 
-#MonsterStats{}
+#monsterStats{
+    display: none;
+    border: 1px black;
+    padding: 5px;
+    background-color: chartreuse;
+}
+
+.stat{
+    padding-right: 10px;
+}
