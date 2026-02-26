@@ -24,9 +24,11 @@ button1.onclick = goStore; //when button one is clicked it will call the functio
 button2.onclick = goCave; //when button one is clicked it will call the function which is go to the store
 button3.onclick = fightDragon; //when button one is clicked it will call the function which is go to the store
 
-// create function goStore
 function goStore() {
     console.log("Going to the store....")
+    button1.innerText = "Buy 10 health (for 10 gold)";
+    button2.innerText = "Buy Weapon (for 30 gold)";
+    button3.innerText = "Got to town square";
 }
 
 // create function goCave
