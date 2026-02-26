@@ -106,6 +106,7 @@ function buyHealth() {
     // create function buyWeapon
 function buyWeapon() {
     console.log("Buying Weapon....")
+    if (currentWeapon < (weapons.length-1)){
     if (gold >= 30){
         gold -= 30;
         currentWeapon++; //currentWeapon += 1
@@ -113,8 +114,24 @@ function buyWeapon() {
         let newWeapon = weapons[currentWeapon].name;
         text.innerText = "you have a" + newWeapon + "as new weapon. ";
         inventory.push(newWeapon);
-        text.innerText = "in your inventory you have:" + inventory;
-    } else{text.innerText = "you dont have enough gold to buy weapon"}
+        text.innerText = "in your inventory you have: " + inventory;
+    } else{text.innerText = "you dont have enough gold to buy weapon";}
+}else{text.innerText = "you already have the most powerful weapon";
+    button2.innerText = "Sell weapon for 15 gold";
+    button2.onclick = sellWeapon;
+}
+}
+
+   // create function sellweapon
+function sellWeapon() {
+    console.log("Selling....")
+     if (inventory.length > 1){
+        gold += 15;
+        goldText.innerText = gold;
+        let currentWeapon = inventory.shift();
+         text.innerText = "you sold a" + currentWeapon + ".";
+          text.innerText = "in your inventory you have: " + inventory;
+     } else { text.innerText = "cant sell your only weapon"}
 }
 
    // create function fight slime
