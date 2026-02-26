@@ -6,3 +6,15 @@ let fighting;
 let monsterHealth;
 let inventory = ["stick"];
 // let inventory = ["stick", "dagger", "sword"];
+
+// inorder to update html elements on a html   webpage, get reference to them in your js code file
+const button1 = document.querySelector("#button1"); //value of variable will not change
+const button2 = document.querySelector("#button2"); //value of variable will not change
+const button3 = document.querySelector("#button3"); //value of variable will not change
+const text = document.querySelector("#text"); //value of variable will not change
+const xpText = document.querySelector("#xpText"); //value of variable will not change
+const healthText = document.querySelector("#healthText"); //value of variable will not change
+const goldText = document.querySelector("#goldText"); //value of variable will not change
+const monsterStats = document.querySelector("#monsterStats"); //value of variable will not change
+const monsterName = document.querySelector("#monsterName"); //value of variable will not change
+const monsterHealthText = document.querySelector("#monsterHealth"); //value of variable will not change
