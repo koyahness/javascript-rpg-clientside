@@ -19,7 +19,12 @@ const monsterStats = document.querySelector("#monsterStats"); //value of variabl
 const monsterName = document.querySelector("#monsterName"); //value of variable will not change
 const monsterHealthText = document.querySelector("#monsterHealth"); //value of variable will not change
 
-const weapons = []; //empty array
+const weapons = [
+    {name: "stick", power: 5},
+    {name: "dagger", power: 30},
+    {name: "claw hammer", power: 50},
+    {name: "sword", power: 100}
+]; //
 
 const locations = [
     {
@@ -101,6 +106,15 @@ function buyHealth() {
     // create function buyWeapon
 function buyWeapon() {
     console.log("Buying Weapon....")
+    if (gold >= 30){
+        gold -= 30;
+        currentWeapon++; //currentWeapon += 1
+        goldText.innerText = gold;
+        let newWeapon = weapons[currentWeapon].name;
+        text.innerText = "you have a" + newWeapon + "as new weapon. ";
+        inventory.push(newWeapon);
+        text.innerText = "in your inventory you have:" + inventory;
+    } else{text.innerText = "you dont have enough gold to buy weapon"}
 }
 
    // create function fight slime
