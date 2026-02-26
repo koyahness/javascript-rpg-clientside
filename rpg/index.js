@@ -18,3 +18,8 @@ const goldText = document.querySelector("#goldText"); //value of variable will n
 const monsterStats = document.querySelector("#monsterStats"); //value of variable will not change
 const monsterName = document.querySelector("#monsterName"); //value of variable will not change
 const monsterHealthText = document.querySelector("#monsterHealth"); //value of variable will not change
+
+//initialise the buttons when clicked
+button1.onclick = goStore; //when button one is clicked it will call the function which is go to the store
+button2.onclick = goCave; //when button one is clicked it will call the function which is go to the store
+button3.onclick = fightDragon; //when button one is clicked it will call the function which is go to the store
