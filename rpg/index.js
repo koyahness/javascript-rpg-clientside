@@ -1,5 +1,5 @@
-let xp = 0;
-let health =100;
+let xp = 0; //var allows the most changing and opens code to bugs
+let health =100; 
 let gold =0;
 let currentWeapon=0;
 let fighting;
@@ -21,14 +21,33 @@ const monsterHealthText = document.querySelector("#monsterHealth"); //value of v
 
 //initialise the buttons when clicked
 button1.onclick = goStore; //when button one is clicked it will call the function which is go to the store
-button2.onclick = goCave; //when button one is clicked it will call the function which is go to the store
-button3.onclick = fightDragon; //when button one is clicked it will call the function which is go to the store
+button2.onclick = goCave; //when button one is clicked it will call the function which is go to the cave
+button3.onclick = fightDragon; //when button one is clicked it will call the function which is fight the dragon
 
+// create function goTown
+function goTown() {
+    console.log("Going to town....")
+     button1.innerText = "Buy 10 health (for 10 gold)";
+    button2.innerText = "Buy Weapon (for 30 gold)";
+    button3.innerText = "Got to town square";
+
+    button1.onclick = buyHealth;
+    button2.onclick = buyWeapon;
+    button3.onclick = goTown;
+    text.innerText = "You are in the store.... lets shop for health and weapons. Go to town when you are done"
+}
+
+// create function goStore
 function goStore() {
     console.log("Going to the store....")
     button1.innerText = "Buy 10 health (for 10 gold)";
     button2.innerText = "Buy Weapon (for 30 gold)";
     button3.innerText = "Got to town square";
+
+    button1.onclick = buyHealth;
+    button2.onclick = buyWeapon;
+    button3.onclick = goTown;
+    text.innerText = "You are in the store.... lets shop for health and weapons. Go to town when you are done"
 }
 
 // create function goCave
@@ -39,4 +58,14 @@ function goCave() {
 // create function fighting dragon
 function fightDragon() {
     console.log("Fighting dragon....")
+} 
+
+    // create function buyHealth
+function buyHealth() {
+    console.log("Buying 10 health....")
+}
+
+    // create function buyWeapon
+function buyWeapon() {
+    console.log("Buying Weapon....")
 }
