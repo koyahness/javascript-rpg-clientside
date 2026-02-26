@@ -23,3 +23,18 @@ const monsterHealthText = document.querySelector("#monsterHealth"); //value of v
 button1.onclick = goStore; //when button one is clicked it will call the function which is go to the store
 button2.onclick = goCave; //when button one is clicked it will call the function which is go to the store
 button3.onclick = fightDragon; //when button one is clicked it will call the function which is go to the store
+
+// create function goStore
+function goStore() {
+    console.log("Going to the store....")
+}
+
+// create function goCave
+function goCave() {
+    console.log("Going to the cave....")
+}
+
+// create function fighting dragon
+function fightDragon() {
+    console.log("Fighting dragon....")
+}
