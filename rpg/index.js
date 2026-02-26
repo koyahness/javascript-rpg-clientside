@@ -1,6 +1,6 @@
 let xp = 0; //var allows the most changing and opens code to bugs
-let health =100; 
-let gold =0;
+let health = 100; 
+let gold = 50;
 let currentWeapon=0;
 let fighting;
 let monsterHealth;
@@ -18,6 +18,8 @@ const goldText = document.querySelector("#goldText"); //value of variable will n
 const monsterStats = document.querySelector("#monsterStats"); //value of variable will not change
 const monsterName = document.querySelector("#monsterName"); //value of variable will not change
 const monsterHealthText = document.querySelector("#monsterHealth"); //value of variable will not change
+
+const weapons = []; //empty array
 
 const locations = [
     {
@@ -88,6 +90,12 @@ function fightDragon() {
     // create function buyHealth
 function buyHealth() {
     console.log("Buying 10 health....")
+    if (gold >= 10) {
+    gold -= 10; //long way is gold = gold - 10 //short way is compound assignment 
+    health += 10;
+    goldText.innerText = gold;
+    healthText.innerText = health;
+    } else{text.innerText = "you dont have enough gold to buy health"}
 }
 
     // create function buyWeapon
