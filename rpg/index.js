@@ -16,7 +16,7 @@ const xpText = document.querySelector("#xpText"); //value of variable will not c
 const healthText = document.querySelector("#healthText"); //value of variable will not change
 const goldText = document.querySelector("#goldText"); //value of variable will not change
 const monsterStats = document.querySelector("#monsterStats"); //value of variable will not change
-const monsterName = document.querySelector("#monsterName"); //value of variable will not change
+const monsterNameText = document.querySelector("#monsterName"); //value of variable will not change
 const monsterHealthText = document.querySelector("#monsterHealth"); //value of variable will not change
 
 const weapons = [
@@ -25,6 +25,13 @@ const weapons = [
     {name: "claw hammer", power: 50},
     {name: "sword", power: 100}
 ]; //
+
+
+const monsters = [
+     {name: "slime", level: 2, health: 15},
+     {name: "fanged beast", level: 8, health: 60},
+     {name: "dragon", level: 20, health: 300}
+]
 
 const locations = [
     {
@@ -44,6 +51,30 @@ const locations = [
         "button text": ["Fight slime", "Fight fanged beast", "Got to town square"],
         "button functions": [fightSlime, fightBeast, goTown],
         text:  "You are in the store.... lets shop for health and weapons. Go to town when you are done"
+    },
+    {
+        name: "fight", //this is a key
+        "button text": ["Attack", "Dodge", "Run"],
+        "button functions": [attack, dodge, goTown],
+        text:  "You are in the store.... lets shop for health and weapons. Go to town when you are done"
+    },
+    {
+        name: "kill monster", //this is a key
+        "button text": ["Go to town square", "Go to town square", "Go to town square"],
+        "button functions": [goTown, goTown, goTown],
+        text:  "The monster screams Arg! you gain xpereince and find gold"
+    },
+    {
+        name: "lose", //this is a key
+        "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+        "button functions": [restart, restart, restart],
+        text:  "You die"
+    },
+    {
+        name: "win", //this is a key
+        "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
+        "button functions": [restart, restart, restart],
+        text:  "You defeat the dragon and win the game"
     }
 ];
 
@@ -58,6 +89,7 @@ button3.onclick = fightDragon; //when button one is clicked it will call the fun
 
 function update(location) {
     console.log("Going to town....")
+    monsterStats.style.display = "none"; //when going to new location monster stats doesnt show up
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];;
     button3.innerText = location["button text"][2];;
@@ -86,11 +118,6 @@ function goCave() {
     console.log("Going to the cave....");
      update(locations[2]);
 }
-
-// create function fighting dragon
-function fightDragon() {
-    console.log("Fighting dragon....")
-} 
 
     // create function buyHealth
 function buyHealth() {
@@ -136,10 +163,92 @@ function sellWeapon() {
 
    // create function fight slime
 function fightSlime() {
-    console.log("Fighting slime....")
+    console.log("Fighting slime....");
+    fighting = 0;
+    goFight();
 }
 
    // create function fight beast
 function fightBeast() {
-    console.log("Fighting beast....")
+    console.log("Fighting beast....");
+    fighting = 1;
+    goFight();
 }
+
+// create function fighting dragon
+function fightDragon() {
+    console.log("Fighting dragon....");
+    fighting = 2;
+    goFight();
+}
+
+   // create function goFight
+function goFight() {
+    console.log("Going to fight....");
+    update(locations[3]);
+    monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block"; //update CSS styles through java script element.style. is how to update the css styles
+    monsterNameText.innerText = monsters[fighting].name
+    monsterHealthText.innerText = monsterHealth;
+}
+
+//  create function attack
+function attack() {
+    console.log("Attacking....");
+    text.innerText = "The " + monsters[fighting].name + " attacks.";
+    text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
+    health -= monsters[fighting].level;
+    monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random()*xp) + 1 ; //math.random creates a random number between 0 and 1 //math.floor will round up the number
+    healthText.innerText = health;
+    monsterHealthText.innerText = monsterHealth;
+    if ( health <= 0) {
+        lose();
+    } else if ( monsterHealth <= 0) {
+        if (fighting === 2) {
+            winGame();
+        } else {defeatMonster();}
+    }
+}
+
+//  create function dodge
+function dodge() {
+    console.log("Dodging....");
+    text.innerText = "You dodge the" + monsters[fighting].name + " attacks.";
+}
+//  create function defeat monster
+function defeatMonster() {
+    console.log("monster losing....");
+    gold += Math.floor(monsters[fighting].level * 6.7);
+    xp += monsters[fighting].level;
+    goldText.innerText = gold;
+    xpText.innerText = xp;
+    update(locations[4]);
+}
+
+//  create function lose
+function lose() {
+    console.log("Lose....");
+    update(locations[5]);
+}
+
+
+//  create function lose
+function  winGame() {
+    console.log("Win....");
+    update(locations[6]);
+}
+
+//  create function restart
+function restart() {
+    console.log("Lose....");
+    xp = 0; //var allows the most changing and opens code to bugs
+    health = 100;
+    gold = 50;
+    currentWeapon=0;
+    inventory = ["stick"];
+    goldText.innerText = gold;
+    healthText.innerText = health;
+    xpText.innerText = xp;
+    goTown();
+}
+
