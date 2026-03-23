@@ -204,8 +204,6 @@ function attack() {
         text.innerText += "You miss";
     }
 
-
-    
     // health -= monsters[fighting].level;
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1; //math.random creates a random number between 0 and 1 //math.floor will round up the number
     healthText.innerText = health;
@@ -229,6 +227,10 @@ function getMonsterAttackValue(level) {
     console.log(hit);
     return  hit
 }
+
+function isMonsterHit() {
+    return Math.random() > .2;
+};
 
 //  create function dodge
 function dodge() {
