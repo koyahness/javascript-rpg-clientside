@@ -161,6 +161,17 @@ function sellWeapon() {
      } else { text.innerText = "cant sell your only weapon"}
 }
 
+
+  // create function goFight
+function goFight() {
+    console.log("Going to fight....");
+    update(locations[3]);
+    monsterHealth = monsters[fighting].health;
+    monsterStats.style.display = "block"; //update CSS styles through java script element.style. is how to update the css styles
+    monsterNameText.innerText = monsters[fighting].name
+    monsterHealthText.innerText = monsterHealth;
+}
+
    // create function fight slime
 function fightSlime() {
     console.log("Fighting slime....");
@@ -182,15 +193,7 @@ function fightDragon() {
     goFight();
 }
 
-   // create function goFight
-function goFight() {
-    console.log("Going to fight....");
-    update(locations[3]);
-    monsterHealth = monsters[fighting].health;
-    monsterStats.style.display = "block"; //update CSS styles through java script element.style. is how to update the css styles
-    monsterNameText.innerText = monsters[fighting].name
-    monsterHealthText.innerText = monsterHealth;
-}
+ 
 
 //  create function attack
 function attack() {
