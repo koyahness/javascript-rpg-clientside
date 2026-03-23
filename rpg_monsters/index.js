@@ -133,7 +133,7 @@ function buyHealth() {
     // create function buyWeapon
 function buyWeapon() {
     console.log("Buying Weapon....")
-    if (currentWeapon < (weapons.length-1)){
+    if (currentWeapon < (weapons.length - 1)){
     if (gold >= 30){
         gold -= 30;
         currentWeapon++; //currentWeapon += 1
