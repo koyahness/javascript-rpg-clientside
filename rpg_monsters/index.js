@@ -38,7 +38,7 @@ const locations = [
         name: "town square", //this is a key
         "button text": ["Go to store", "Go to cave", "Fight dragon"],
         "button functions": [goStore, goCave, fightDragon],
-        text:  "You are in town square.... you see a sign \"store\" or \"cave\"."
+        text:  "You are in town square.... you see a sign \"store\" or \"cave\". Otherwise fight the dragon!"
     },
     {
         name: "store", //this is a key
@@ -56,7 +56,7 @@ const locations = [
         name: "fight", //this is a key
         "button text": ["Attack", "Dodge", "Run"],
         "button functions": [attack, dodge, goTown],
-        text:  "You are fighting the monster."
+        text:  "You are fighting the monster. Give your best!"
     },
     {
         name: "kill monster", //this is a key
@@ -133,7 +133,7 @@ function buyHealth() {
     health += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
-    } else{text.innerText = "you dont have enough gold to buy health."}
+    } else{text.innerText = "You dont have enough gold to buy health!"}
 }
 
     // create function buyWeapon
@@ -148,9 +148,9 @@ function buyWeapon() {
         text.innerText = "You have a" + newWeapon + "as new weapon. ";
         inventory.push(newWeapon);
         text.innerText = "In your weapon inventory you have: " + inventory;
-    } else{text.innerText = "You dont have enough gold to buy weapon";}
-}else{text.innerText = "You already have the most powerful weapon.";
-    button2.innerText = "Sell weapon for 15 gold.";
+    } else{text.innerText = "You dont have enough gold to buy weapon!";}
+}else{text.innerText = "You already have the most powerful weapon!";
+    button2.innerText = "Sell weapon for 15 gold!";
     button2.onclick = sellWeapon;
 }
 }
@@ -309,7 +309,7 @@ function pick(guess) {
         numbers.push(Math.floor(Math.random() * 11));
     }
 
-    text.innerText = "you picked" + guess + ". Here are the random numbers: \n"
+    text.innerText = "You picked" + guess + ". Here are the random numbers: \n"
 
     for (let i = 0; i < 0; i++) {
         text.innerText += numbers[i] + "\n";
