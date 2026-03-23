@@ -38,13 +38,13 @@ const locations = [
         name: "town sqaure", //this is a key
         "button text": ["Go to store", "Go to cave", "Fight dragon"],
         "button functions": [goStore, goCave, fightDragon],
-        text:  "You are in Townsqaure.... you see a sign \"store\" or \"cave\""
+        text:  "You are in town sqaure.... you see a sign \"store\" or \"cave\""
     },
     {
         name: "store", //this is a key
         "button text": ["Buy 10 health (for 10 gold)", "Buy Weapon (for 30 gold)", "Got to town square"],
         "button functions": [buyHealth, buyWeapon, goTown],
-        text:  "You are in the store.... lets shop for health and weapons. Go to town when you are done"
+        text:  "You are in the store.... Lets shop for health and weapons. Go to town square when you are done"
     },
     {
         name: "cave", //this is a key
@@ -62,7 +62,7 @@ const locations = [
         name: "kill monster", //this is a key
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
         "button functions": [goTown, goTown, easterEgg],
-        text:  "The monster screams Arg! You gain experience and find gold, but health or weapons"
+        text:  "The monster screams Arg! You gain experience and find gold, buy health or weapons"
     },
     {
         name: "lose", //this is a key
