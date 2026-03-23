@@ -147,7 +147,7 @@ function buyWeapon() {
         let newWeapon = weapons[currentWeapon].name;
         text.innerText = "you have a" + newWeapon + "as new weapon. ";
         inventory.push(newWeapon);
-        text.innerText = "in your inventory you have: " + inventory;
+        text.innerText = "In your inventory you have: " + inventory;
     } else{text.innerText = "You dont have enough gold to buy weapon";}
 }else{text.innerText = "You already have the most powerful weapon";
     button2.innerText = "Sell weapon for 15 gold";
