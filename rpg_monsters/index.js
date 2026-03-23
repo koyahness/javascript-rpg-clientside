@@ -24,7 +24,7 @@ const weapons = [
     {name: "dagger", power: 30},
     {name: "claw hammer", power: 50},
     {name: "sword", power: 100}
-]; //
+]
 
 
 const monsters = [
