@@ -244,7 +244,7 @@ function  winGame() {
 
 //  create function restart
 function restart() {
-    console.log("Lose....");
+    console.log("Restart....");
     xp = 0; //var allows the most changing and opens code to bugs
     health = 100;
     gold = 50;
