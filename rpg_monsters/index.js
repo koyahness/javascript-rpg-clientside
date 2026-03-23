@@ -61,7 +61,7 @@ const locations = [
     {
         name: "kill monster", //this is a key
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
-        "button functions": [goTown, goTown, goTown],
+        "button functions": [goTown, goTown, easterEgg],
         text:  "The monster screams Arg! you gain expereince and find gold"
     },
     {
