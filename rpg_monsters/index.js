@@ -219,6 +219,11 @@ function attack() {
         /** alternative Tenary statement
          * fighting === 2 ? winGame() : defeatMonster()
          */
+
+        if (Math.random() <= .1 && inventory.length !== 1) {
+            text.innerText += "Your" + inventory.pop() + "break";
+            currentWeapon--;
+        }
     }
 }
 
@@ -229,7 +234,7 @@ function getMonsterAttackValue(level) {
 }
 
 function isMonsterHit() {
-    return Math.random() > .2;
+    return Math.random() > .2 || health < 20; //give number btn 0 and 1 so 80% of time there is a hit
 };
 
 //  create function dodge
