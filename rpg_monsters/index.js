@@ -16,8 +16,8 @@ const xpText = document.querySelector("#xpText"); //value of variable will not c
 const healthText = document.querySelector("#healthText"); //value of variable will not change
 const goldText = document.querySelector("#goldText"); //value of variable will not change
 const monsterStats = document.querySelector("#monsterStats"); //value of variable will not change
-const monsterNameText = document.querySelector("#monsterName"); //value of variable will not change
-const monsterHealthText = document.querySelector("#monsterHealth"); //value of variable will not change
+const monsterNameText = document.querySelector("#MonsterName"); //value of variable will not change
+const monsterHealthText = document.querySelector("#MonsterHealth"); //value of variable will not change
 
 const weapons = [
     {name: "stick", power: 5},
