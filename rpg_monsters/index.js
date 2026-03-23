@@ -62,19 +62,19 @@ const locations = [
         name: "kill monster", //this is a key
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
         "button functions": [goTown, goTown, easterEgg],
-        text:  "The monster screams Arg! you gain expereince and find gold"
+        text:  "The monster screams Arg! You gain experience and find gold, but health or weapons"
     },
     {
         name: "lose", //this is a key
         "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
         "button functions": [restart, restart, restart],
-        text:  "You die"
+        text:  "You die!"
     },
     {
         name: "win", //this is a key
         "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
         "button functions": [restart, restart, restart],
-        text:  "You defeat the dragon and win the game"
+        text:  "Sick! You defeat the dragon and win the game"
     },
     {
         name: "easter egg", //this is a key
@@ -148,8 +148,8 @@ function buyWeapon() {
         text.innerText = "you have a" + newWeapon + "as new weapon. ";
         inventory.push(newWeapon);
         text.innerText = "in your inventory you have: " + inventory;
-    } else{text.innerText = "you dont have enough gold to buy weapon";}
-}else{text.innerText = "you already have the most powerful weapon";
+    } else{text.innerText = "You dont have enough gold to buy weapon";}
+}else{text.innerText = "You already have the most powerful weapon";
     button2.innerText = "Sell weapon for 15 gold";
     button2.onclick = sellWeapon;
 }
