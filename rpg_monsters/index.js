@@ -249,7 +249,7 @@ function isMonsterHit() {
 //  create function dodge
 function dodge() {
     console.log("Dodging....");
-    text.innerText = "You dodge the" + monsters[fighting].name + " attacks.";
+    text.innerText = "You dodge the " + monsters[fighting].name + " attacks.";
 }
 //  create function defeat monster
 function defeatMonster() {
@@ -294,12 +294,12 @@ function easterEgg() {
 
 
 function pickTwo() {
-    pickEight(2);
+    pick(2);
 }
 
 
 function pickEight() {
-     pickEight(8);
+     pick(8);
 }
 
 
