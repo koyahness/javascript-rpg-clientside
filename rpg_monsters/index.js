@@ -42,7 +42,7 @@ const locations = [
     },
     {
         name: "store", //this is a key
-        "button text": ["Buy 10 health (for 10 gold)", "Buy a Weapon (for 30 gold)", "Got to town square"],
+        "button text": ["Buy 10 health (for 10 gold)", "Buy a Weapon (for 30 gold)", "Got to Town square"],
         "button functions": [buyHealth, buyWeapon, goTown],
         text:  "You are in the store.... Lets shop for health and weapons. Go to town square when you are done"
     },
