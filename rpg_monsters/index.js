@@ -1,7 +1,7 @@
 let xp = 0; //var allows the most changing and opens code to bugs
 let health = 100; 
 let gold = 50;
-let currentWeapon=0;
+let currentWeapon = 0;
 let fighting;
 let monsterHealth;
 let inventory = ["stick"];
@@ -198,9 +198,11 @@ function attack() {
     text.innerText = "The " + monsters[fighting].name + " attacks.";
     text.innerText += " You attack it with your " + weapons[currentWeapon].name + ".";
     health -= getMonsterAttackValue(monsters[fighting].level);
+    // health -= monsters[fighting].level;
     monsterHealth -= weapons[currentWeapon].power + Math.floor(Math.random() * xp) + 1; //math.random creates a random number between 0 and 1 //math.floor will round up the number
     healthText.innerText = health;
     monsterHealthText.innerText = monsterHealth;
+
     if ( health <= 0) {
         lose();
     } else if ( monsterHealth <= 0) {
