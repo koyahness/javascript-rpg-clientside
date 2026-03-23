@@ -21,9 +21,9 @@ const monsterHealthText = document.querySelector("#MonsterHealth"); //value of v
 
 const weapons = [
     {name: "stick", power: 5},
-    {name: "dagger", power: 30},
-    {name: "claw hammer", power: 50},
-    {name: "sword", power: 100}
+    {name: " dagger", power: 30},
+    {name: " claw hammer", power: 50},
+    {name: " sword", power: 100}
 ]
 
 
@@ -38,31 +38,31 @@ const locations = [
         name: "town square", //this is a key
         "button text": ["Go to store", "Go to cave", "Fight dragon"],
         "button functions": [goStore, goCave, fightDragon],
-        text:  "You are in town sqaure.... you see a sign \"store\" or \"cave\""
+        text:  "You are in town square.... you see a sign \"store\" or \"cave\"."
     },
     {
         name: "store", //this is a key
         "button text": ["Buy 10 health (for 10 gold)", "Buy a weapon (for 30 gold)", "Got to Town square"],
         "button functions": [buyHealth, buyWeapon, goTown],
-        text:  "You are in the store.... Lets shop for health and weapons. Go to town square when you are done"
+        text:  "You are in the store.... Lets shop for health and weapons. Go to town square when you are done."
     },
     {
         name: "cave", //this is a key
         "button text": ["Fight slime", "Fight fanged beast", "Got to town square"],
         "button functions": [fightSlime, fightBeast, goTown],
-        text:  "You are in the cave, fight the monsters (slime or fanged beast)"
+        text:  "You are in the cave, fight the monsters (slime or fanged beast)."
     },
     {
         name: "fight", //this is a key
         "button text": ["Attack", "Dodge", "Run"],
         "button functions": [attack, dodge, goTown],
-        text:  "You are fighting the monster"
+        text:  "You are fighting the monster."
     },
     {
         name: "kill monster", //this is a key
         "button text": ["Go to town square", "Go to town square", "Go to town square"],
         "button functions": [goTown, goTown, easterEgg],
-        text:  "The monster screams Arg! You gain experience and find gold, buy health or weapons"
+        text:  "The monster screams Arg! You gain experience and find gold, buy health or weapons."
     },
     {
         name: "lose", //this is a key
@@ -74,7 +74,7 @@ const locations = [
         name: "win", //this is a key
         "button text": ["REPLAY?", "REPLAY?", "REPLAY?"],
         "button functions": [restart, restart, restart],
-        text:  "Sick! You defeat the dragon and win the game"
+        text:  "Sick! You defeat the dragon and win the game."
     },
     {
         name: "easter egg", //this is a key
@@ -133,7 +133,7 @@ function buyHealth() {
     health += 10;
     goldText.innerText = gold;
     healthText.innerText = health;
-    } else{text.innerText = "you dont have enough gold to buy health"}
+    } else{text.innerText = "you dont have enough gold to buy health."}
 }
 
     // create function buyWeapon
@@ -149,8 +149,8 @@ function buyWeapon() {
         inventory.push(newWeapon);
         text.innerText = "In your weapon inventory you have: " + inventory;
     } else{text.innerText = "You dont have enough gold to buy weapon";}
-}else{text.innerText = "You already have the most powerful weapon";
-    button2.innerText = "Sell weapon for 15 gold";
+}else{text.innerText = "You already have the most powerful weapon.";
+    button2.innerText = "Sell weapon for 15 gold.";
     button2.onclick = sellWeapon;
 }
 }
@@ -163,8 +163,8 @@ function sellWeapon() {
         goldText.innerText = gold;
         let currentWeapon = inventory.shift();
          text.innerText = "you sold a" + currentWeapon + ".";
-          text.innerText = "in your inventory you have: " + inventory;
-     } else { text.innerText = "cant sell your only weapon"}
+          text.innerText = "In your weapon inventory you have: " + inventory;
+     } else { text.innerText = "Cant sell your only weapon!"}
 }
 
 
@@ -210,7 +210,7 @@ function attack() {
     if (isMonsterHit()) {
         health -= getMonsterAttackValue(monsters[fighting].level);
     } else {
-        text.innerText += "You miss";
+        text.innerText += "You miss!";
     }
 
     // health -= monsters[fighting].level;
