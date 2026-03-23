@@ -302,6 +302,10 @@ function pickEight() {
      pickEight(8);
 }
 
+
 function pick(guess) {
     let numbers = [];
+    while (numbers.length < 10) {
+        numbers.push(Math.floor(Math.random() * 11));
+    }
 }
