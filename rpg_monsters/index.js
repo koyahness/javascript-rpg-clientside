@@ -42,13 +42,13 @@ const locations = [
     },
     {
         name: "store", //this is a key
-        "button text": ["Buy 10 health (for 10 gold)", "Buy a weapon (for 30 gold)", "Got to Town square"],
+        "button text": ["Buy 10 health (for 10 gold)", "Buy a weapon (for 30 gold)", "Go to Town square"],
         "button functions": [buyHealth, buyWeapon, goTown],
         text:  "You are in the store.... Lets shop for health and weapons. Go to town square when you are done."
     },
     {
         name: "cave", //this is a key
-        "button text": ["Fight slime", "Fight fanged beast", "Got to town square"],
+        "button text": ["Fight slime", "Fight fanged beast", "Go to town square"],
         "button functions": [fightSlime, fightBeast, goTown],
         text:  "You are in the cave, fight the monsters (slime or fanged beast)."
     },
@@ -230,7 +230,7 @@ function attack() {
          */
 
         if (Math.random() <= .1 && inventory.length !== 1) {
-            text.innerText += "Your" + inventory.pop() + "break";
+            text.innerText += "...... But,your" + inventory.pop() + " breaks";
             currentWeapon--;
         }
     }
@@ -309,7 +309,7 @@ function pick(guess) {
         numbers.push(Math.floor(Math.random() * 11));
     }
 
-    text.innerText = "You picked" + guess + ". Here are the random numbers: \n"
+    text.innerText = "You picked " + guess + ". Here are the random numbers: \n"
 
     for (let i = 0; i < 0; i++) {
         text.innerText += numbers[i] + "\n";
