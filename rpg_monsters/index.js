@@ -94,7 +94,7 @@ button3.onclick = fightDragon; //when button one is clicked it will call the fun
 //There is code repitition in go town and in initialise buttons
 
 function update(location) {
-    console.log("Going to town....")
+    console.log("updating location....")
     monsterStats.style.display = "none"; //when going to new location monster stats doesnt show up
     button1.innerText = location["button text"][0];
     button2.innerText = location["button text"][1];;
@@ -174,7 +174,7 @@ function goFight() {
     update(locations[3]);
     monsterHealth = monsters[fighting].health;
     monsterStats.style.display = "block"; //update CSS styles through java script element.style. is how to update the css styles
-    monsterNameText.innerText = monsters[fighting].name
+    monsterNameText.innerText = monsters[fighting].name;
     monsterHealthText.innerText = monsterHealth;
 }
 
