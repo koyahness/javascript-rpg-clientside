@@ -35,14 +35,14 @@ const monsters = [
 
 const locations = [
     {
-        name: "town sqaure", //this is a key
+        name: "town square", //this is a key
         "button text": ["Go to store", "Go to cave", "Fight dragon"],
         "button functions": [goStore, goCave, fightDragon],
         text:  "You are in town sqaure.... you see a sign \"store\" or \"cave\""
     },
     {
         name: "store", //this is a key
-        "button text": ["Buy 10 health (for 10 gold)", "Buy a Weapon (for 30 gold)", "Got to Town square"],
+        "button text": ["Buy 10 health (for 10 gold)", "Buy a weapon (for 30 gold)", "Got to Town square"],
         "button functions": [buyHealth, buyWeapon, goTown],
         text:  "You are in the store.... Lets shop for health and weapons. Go to town square when you are done"
     },
@@ -145,9 +145,9 @@ function buyWeapon() {
         currentWeapon++; //currentWeapon += 1
         goldText.innerText = gold;
         let newWeapon = weapons[currentWeapon].name;
-        text.innerText = "you have a" + newWeapon + "as new weapon. ";
+        text.innerText = "You have a" + newWeapon + "as new weapon. ";
         inventory.push(newWeapon);
-        text.innerText = "In your inventory you have: " + inventory;
+        text.innerText = "In your weapon inventory you have: " + inventory;
     } else{text.innerText = "You dont have enough gold to buy weapon";}
 }else{text.innerText = "You already have the most powerful weapon";
     button2.innerText = "Sell weapon for 15 gold";
