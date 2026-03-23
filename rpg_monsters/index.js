@@ -208,7 +208,7 @@ function attack() {
             winGame();
         } else {defeatMonster();}
 
-        /** Tenary statement
+        /** alternative Tenary statement
          * fighting === 2 ? winGame() : defeatMonster()
          */
     }
@@ -236,7 +236,7 @@ function lose() {
 }
 
 
-//  create function lose
+//  create function win game
 function  winGame() {
     console.log("Win....");
     update(locations[6]);
