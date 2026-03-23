@@ -29,6 +29,7 @@ body{
     display: none; /* //stats will only show when fighting a monster */
     border: 1px black solid;
     padding: 5px;
+    color: rgb(108, 42, 165);
     background-color: chartreuse;
 }
 
