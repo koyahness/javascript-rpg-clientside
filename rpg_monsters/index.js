@@ -1,3 +1,5 @@
+import { animate } from './script'
+
 let xp = 0; //var allows the most changing and opens code to bugs
 let health = 100; 
 let gold = 50;
