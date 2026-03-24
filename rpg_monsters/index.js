@@ -9,6 +9,8 @@ let monsterHealth;
 let inventory = ["stick"];
 // let inventory = ["stick", "dagger", "sword"];
 
+
+
 // inorder to update html elements on a html   webpage, get reference to them in your js code file
 const button1 = document.querySelector("#button1"); //value of variable will not change
 const button2 = document.querySelector("#button2"); //value of variable will not change
@@ -106,7 +108,8 @@ function update(location) {
     button1.onclick = location["button functions"][0];
     button2.onclick = location["button functions"][1];
     button3.onclick = location["button functions"][2];
-    text.innerText =  location["text"]; 
+    text.innerText =  location["text"];
+    // animate();
 }
 
 // create function goTown
