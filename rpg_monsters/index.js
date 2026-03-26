@@ -37,6 +37,7 @@ const monsters = [ //array with objects as elements
      {name: "dragon", level: 20, health: 300}
 ]
 
+
 const locations = [ //array with objects as elements
     {
         name: "town square", //this is a key
