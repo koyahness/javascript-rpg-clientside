@@ -23,7 +23,7 @@ const monsterStats = document.querySelector("#monsterStats"); //value of variabl
 const monsterNameText = document.querySelector("#MonsterName"); //value of variable will not change
 const monsterHealthText = document.querySelector("#MonsterHealth"); //value of variable will not change
 
-const weapons = [
+const weapons = [ //array with objects as elements
     {name: "stick", power: 5},
     {name: " dagger", power: 30},
     {name: " claw hammer", power: 50},
@@ -31,7 +31,7 @@ const weapons = [
 ]
 
 
-const monsters = [
+const monsters = [ //array with objects as elements
      {name: "slime", level: 2, health: 15},
      {name: "fanged beast", level: 8, health: 60},
      {name: "dragon", level: 20, health: 300}
